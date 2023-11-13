@@ -11,7 +11,24 @@ public class Q01_CountsOfCharactersWithArray {
             abaa   ==> a=3  b=1
     */
    public static void main(String[] args) {
-
+      Scanner scan=new Scanner(System.in);
+      System.out.println("Bir metin giriniz");
+      String str= scan.nextLine();
+      String[] arr=str.split("");
+      System.out.println(Arrays.toString(arr));
+      String output="";
+      for (String s : arr) {
+         int count = 0;
+         for (String string : arr) {
+            if (s.equals(string)) {
+               count++;
+            }
+         }
+         if (!output.contains(s)) {
+            output += s + "=" + count + ",";
+         }
+      }
+      System.out.println("output = " + output);
 
 
    }

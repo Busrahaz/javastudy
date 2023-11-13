@@ -10,6 +10,19 @@ public class Q01_AlphaCharactersCount {
        String str ="heKL75jki8#";
 
 
+/* int count=0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch=str.charAt(i);
+            if (Character.isLetter(ch)){
+                count++;
+            }
+        }
+        System.out.println("1.yol");
+        System.out.println("count = " + count);
+        //2.yol
+        System.out.println("2.yol");
+        System.out.println(str.replaceAll("[^a-zA-Z]","").length());
+​
 /*
 
 

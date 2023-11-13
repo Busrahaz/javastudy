@@ -9,7 +9,24 @@ public class Q04_CountOfEnterCode {
         Scanner input = new Scanner(System.in);
         String pin = "javvaNURjavaNAZjavaSU";
 
+        int girilenHak=3;
+        while (true){
+            System.out.println("Pin kodunu gir");
+            String kPin=input.nextLine();
+            if(pin.equals(kPin)){
+                System.out.println("Pin kodu dogru devam et");
+                break;
+            }else {
+                System.out.println("Hatali pin girdiniz");
+                girilenHak--;
+                System.out.println("Kalan hak: "+girilenHak);
+            }
+            if (girilenHak==0){
+                System.out.println("Tel kapandi pini bilemedin");
+                break;
 
+            }
 
+        }
     }
 }
