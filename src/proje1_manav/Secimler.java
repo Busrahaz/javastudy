@@ -10,9 +10,9 @@ public class Secimler {
     static Scanner scan = new Scanner(System.in);
     static int secim;
 
-
-    public static void secim() {System.out.println("Lütfen kategori seçiniz\n"
-            + "1 Manav\n" + "2 Sarkuteri\n" + "3 Market\n" + "4 Odeme\n" + "5 Cikis");
+    public static void secim(){
+        System.out.println("Lütfen kategori seçiniz\n"
+                + "1 Manav\n" + "2 Sarkuteri\n" + "3 Market\n" + "4 Odeme\n" + "5 Cikis");
         secim = scan.nextInt();
         if (secim==1){
             Manav.urunler();
@@ -33,5 +33,4 @@ public class Secimler {
     private static void cikis() {
         System.out.println("Ckis yapiyorsunuz.Tekrar bekleriz.");
     }
-    }
-
+}

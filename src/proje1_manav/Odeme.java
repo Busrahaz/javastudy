@@ -3,6 +3,7 @@ package proje1_manav;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
+
 public class Odeme {
     static Scanner scan = new Scanner(System.in);
     public static void odeme() {

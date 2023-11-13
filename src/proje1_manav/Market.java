@@ -50,6 +50,5 @@ public class Market {
                 PojoClass.geri(marketUrunler,urunSecim);
             }
         }
-
     }
 }

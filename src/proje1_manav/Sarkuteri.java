@@ -4,24 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Manav {
+import static proje1_manav.Manav.urunSecim;
+
+public class Sarkuteri {
     static Scanner scan = new Scanner(System.in);
-    static int urunSecim;
 
     public static void urunler() {
-        List<String> manavUrunler = new ArrayList<>();
-        List<Double> manavFiyat = new ArrayList<>();
-        String[] urunlerArr = {"Domates", "Patates", "Biber"
-                , "Soğan", "Havuç", "Elma", "Kayisi", "Çilek"
-                , "Kavun", "Üzüm", "Limon"};
-        double[] fiyatArr = {2.10, 3.20, 1.50, 2.30, 3.10
-                , 1.20, 1.90, 6.10, 4.30, 2.70, 0.50};
-        PojoClass.urunListle(manavUrunler,manavFiyat,urunlerArr,fiyatArr);
+        List<String> sarkuteriUrunler = new ArrayList<>();
+        List<Double> sarkuteriFiyat = new ArrayList<>();
+        String[] urunlerArr = {"Kiyma", "Kavurma", "Sosis"
+                , "Sucuk", "Salam", "Tavuk", "Bonfile", "Köfte"
+                , "Yumurta", "Zeytin", "Peynir"};
+        double[] fiyatArr = {200.95, 125.30, 55.40, 152.95, 40.85
+                , 65.90, 175.50, 85.40, 43.70, 32.80, 74.50};
+        PojoClass.urunListle(sarkuteriUrunler,sarkuteriFiyat,urunlerArr,fiyatArr);
         List<String> sepet=Secimler.sepet;
-        if (Secimler.secim==1){
-            urunSecim=PojoClass.getUrunSecim(manavUrunler,manavFiyat);
-            if (urunSecim>0&&urunSecim<manavUrunler.size()){
-                PojoClass.sepet(manavUrunler,manavFiyat,sepet,urunSecim);
+        if (Secimler.secim==2){
+            urunSecim=PojoClass.getUrunSecim(sarkuteriUrunler,sarkuteriFiyat);
+            if (urunSecim>0&&urunSecim<=sarkuteriUrunler.size()){
+                PojoClass.sepet(sarkuteriUrunler,sarkuteriFiyat,sepet,urunSecim);
                 for (int i = 0; i < 1; i++) {
                     System.out.println("Devam etmek istiyor musunuz? T/F");
                     String kcevap=scan.next();
@@ -46,9 +47,8 @@ public class Manav {
                     }
                 }
             }else {
-                PojoClass.geri(manavUrunler,urunSecim);
+                PojoClass.geri(sarkuteriUrunler,urunSecim);
             }
         }
-
     }
 }
